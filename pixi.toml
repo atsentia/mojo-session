@@ -1,0 +1,14 @@
+[project]
+name = "mojo-session"
+version = "0.1.0"
+description = "Pure Mojo HTTP session management"
+authors = ["IDEA2CODE"]
+channels = ["conda-forge", "modular"]
+platforms = ["osx-arm64", "linux-64"]
+
+[tasks]
+build = "mojo build src -o lib/mojo_session.mojopkg"
+test = "mojo run tests/test_session.mojo"
+
+[dependencies]
+max = ">=24.6,<25"
